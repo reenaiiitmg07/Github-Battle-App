@@ -29,7 +29,7 @@ gitPopular(){
       </div>
       <div className="row">
       <p>Github Battle: Battle your friends... and stuff.</p>
-       <button classsName="btn" onClick={this.githubBattle}>Battle</button>
+       <button classsName="btn"><Link to='battle'>Battle</Link></button>
       </div>
       </div>
     );
