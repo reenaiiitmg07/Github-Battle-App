@@ -1,18 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import {Link } from 'react-router-dom'
+import User from './components/user'
 class App extends Component {
+  constructor(props){
+    super();
+
+    this.homeButton=this.homeButton.bind(this);
+    this.githubBattle=this.githubBattle.bind(this);
+    this.gitPopular=this.gitPopular.bind(this);
+  }
+
+  homeButton(){
+
+  }
+  githubBattle(){
+
+  }
+gitPopular(){
+
+}
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="row">
+      <button className="btn"> <Link to='/'>Home</Link></button>
+      <button className="btn">  <Link to='/battle'>battle</Link></button>
+      <button className="btn">  <Link to='/popular'>Popular</Link></button>
+      </div>
+      <div className="row">
+      <p>Github Battle: Battle your friends... and stuff.</p>
+       <button classsName="btn" onClick={this.githubBattle}>Battle</button>
+      </div>
       </div>
     );
   }
